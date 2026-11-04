@@ -438,7 +438,6 @@ def main():
     app = Application.builder().token(BOT_TOKEN).build()
     app.add_handler(CommandHandler("start", cmd_start))
     app.add_handler(CommandHandler("setprefix", cmd_setprefix))
-    app.add_handler(CommandHandler("setoutput", cmd_setoutput))
     app.add_handler(CommandHandler("run", cmd_run))
     app.add_handler(CommandHandler("stop", cmd_stop))
     app.add_handler(CommandHandler("stats", cmd_stats))
